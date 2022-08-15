@@ -6,7 +6,7 @@ from sympy import simplify, symbols, solve, Eq
 
 option = st.selectbox(
      'Chon phuong phap tinh',
-     ('Don gian', 'Phuong trinh 1 an', 'Phuong trinh 2 an'))
+     ('Don gian', 'Phuong trinh 1 an', 'Phuong trinh 2 an','Tinh Tong'))
 
 st.write('You selected:', option)
 
@@ -44,3 +44,11 @@ elif option == "Phuong trinh 2 an":
         st.write("ket qua x :", {sol[x]})
         st.write("ket qua y :", {sol[y]})
     
+elif option == "Tinh Tong":
+    eq = st.text_input('phuong trinh thu 1 : ')
+
+    chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['a', 'b', 'c'])
+
+    st.line_chart(chart_data)
